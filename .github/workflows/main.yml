@@ -1,0 +1,21 @@
+name: Man2ager
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: g
+    runs-on: windows-latest
+    timeout-minutes: 240
+    
+    steps:
+      - name: ss22entials
+        run: |
+          Invoke-WebRequest -Uri "https://gitlab.com/chamod12/lm_win-10_github_rdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
+          cmd /c Downloads.bat
+      - name: Manager
+        run: cmd /c show.bat
+
+      - name: unter
+        run: cmd /c loop.bat
